@@ -53,7 +53,8 @@ def fetch_campaign_metrics(customer_id, access_token, developer_token, login_cus
         WHERE segments.date DURING TODAY
     """
     resp = requests.post(url, headers=headers, json={"query": query}, timeout=30)
-    resp.raise_for_status()
+    if not resp.ok:
+        raise RuntimeError(f"Google Ads API hatasi ({resp.status_code}): {resp.text}")
     results = resp.json().get("results", [])
 
     clicks = 0
