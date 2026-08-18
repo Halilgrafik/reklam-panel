@@ -28,7 +28,8 @@ def get_access_token(client_id, client_secret, refresh_token):
         },
         timeout=30,
     )
-    resp.raise_for_status()
+    if not resp.ok:
+        raise RuntimeError(f"Token yenileme hatasi ({resp.status_code}): {resp.text}")
     return resp.json()["access_token"]
 
 
