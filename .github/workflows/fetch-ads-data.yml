@@ -23,6 +23,7 @@ jobs:
 
       - name: Meta verisini cek
         working-directory: scripts
+        continue-on-error: true
         env:
           META_AD_ACCOUNT_ID_1: ${{ secrets.META_AD_ACCOUNT_ID_1 }}
           META_ACCESS_TOKEN_1: ${{ secrets.META_ACCESS_TOKEN_1 }}
@@ -30,6 +31,7 @@ jobs:
 
       - name: Google Ads verisini cek
         working-directory: scripts
+        continue-on-error: true
         env:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
