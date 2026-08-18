@@ -1,0 +1,48 @@
+name: Reklam verisini cek
+
+on:
+  schedule:
+    - cron: "5 * * * *"   # her saat, saat basi + 5 dakika (UTC)
+  workflow_dispatch: {}    # GitHub arayuzunden manuel tetikleme
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bagimliliklari kur
+        run: pip install -r requirements.txt
+
+      - name: Meta verisini cek
+        working-directory: scripts
+        env:
+          META_AD_ACCOUNT_ID_1: ${{ secrets.META_AD_ACCOUNT_ID_1 }}
+          META_ACCESS_TOKEN_1: ${{ secrets.META_ACCESS_TOKEN_1 }}
+        run: python fetch_meta.py
+
+      - name: Google Ads verisini cek
+        working-directory: scripts
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_DEVELOPER_TOKEN }}
+          GOOGLE_CUSTOMER_ID_1: ${{ secrets.GOOGLE_CUSTOMER_ID_1 }}
+          GOOGLE_LOGIN_CUSTOMER_ID_1: ${{ secrets.GOOGLE_LOGIN_CUSTOMER_ID_1 }}
+          GOOGLE_REFRESH_TOKEN_1: ${{ secrets.GOOGLE_REFRESH_TOKEN_1 }}
+        run: python fetch_google.py
+
+      - name: Degisiklikleri commit'le
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Otomatik veri guncellemesi $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

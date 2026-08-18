@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reklam Paneli</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Reklam Paneli</h1>
+    <div class="account-select">
+      <label for="account">Hesap:</label>
+      <select id="account"></select>
+      <span id="last-updated"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h3>Meta &mdash; Bugün</h3>
+        <p><span id="meta-spend">-</span> harcama</p>
+        <p><span id="meta-purchases">-</span> satış / <span id="meta-purchase-value">-</span> ciro</p>
+        <p><span id="meta-messages">-</span> mesaj/konuşma</p>
+        <p><span id="meta-reach">-</span> erişim &middot; <span id="meta-impressions">-</span> gösterim</p>
+      </div>
+      <div class="card">
+        <h3>Google Ads &mdash; Bugün</h3>
+        <p><span id="google-cost">-</span> maliyet</p>
+        <p><span id="google-clicks">-</span> tıklama &middot; <span id="google-conversions">-</span> dönüşüm</p>
+        <p><span id="google-cpc">-</span> TBM</p>
+        <p><span id="google-active">-</span> aktif / <span id="google-paused">-</span> duraklatılmış kampanya</p>
+      </div>
+    </section>
+
+    <section class="chart-section">
+      <h2>Harcama vs. Satış/Dönüşüm Değeri</h2>
+      <canvas id="spend-chart" height="90"></canvas>
+    </section>
+
+    <section class="table-section">
+      <h2>Günlük Veri</h2>
+      <div class="table-wrap">
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Tarih</th>
+              <th>Meta Harcama</th>
+              <th>Meta Satış</th>
+              <th>Meta Ciro</th>
+              <th>Meta Mesaj</th>
+              <th>Google Maliyet</th>
+              <th>Google Tıklama</th>
+              <th>Google Dönüşüm</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Veri saatte bir GitHub Actions ile otomatik güncellenir.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="app.js"></script>
+</body>
+</html>

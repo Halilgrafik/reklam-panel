@@ -1,0 +1,20 @@
+[
+  {
+    "id": "benim-hesabim",
+    "name": "Benim Hesabım",
+    "meta": {
+      "enabled": true,
+      "ad_account_id_env": "META_AD_ACCOUNT_ID_1",
+      "access_token_env": "META_ACCESS_TOKEN_1"
+    },
+    "google": {
+      "enabled": true,
+      "customer_id_env": "GOOGLE_CUSTOMER_ID_1",
+      "login_customer_id_env": "GOOGLE_LOGIN_CUSTOMER_ID_1",
+      "client_id_env": "GOOGLE_CLIENT_ID",
+      "client_secret_env": "GOOGLE_CLIENT_SECRET",
+      "refresh_token_env": "GOOGLE_REFRESH_TOKEN_1",
+      "developer_token_env": "GOOGLE_DEVELOPER_TOKEN"
+    }
+  }
+]
