@@ -15,6 +15,8 @@ def load_accounts():
 
 def require_env(var_name):
     value = os.environ.get(var_name)
+    if value is not None:
+        value = value.strip()
     if not value:
         raise RuntimeError(
             f"Ortam degiskeni eksik: {var_name}. "

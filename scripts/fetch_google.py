@@ -107,7 +107,7 @@ def main():
             login_customer_id = None
             if login_customer_id_env:
                 import os
-                login_customer_id = os.environ.get(login_customer_id_env, "").replace("-", "") or None
+                login_customer_id = os.environ.get(login_customer_id_env, "").strip().replace("-", "") or None
 
             access_token = get_access_token(client_id, client_secret, refresh_token)
             metrics = fetch_campaign_metrics(customer_id, access_token, developer_token, login_customer_id)
