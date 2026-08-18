@@ -13,7 +13,7 @@ import requests
 
 from common import load_accounts, require_env, load_history, save_history, upsert_today, today_str
 
-API_VERSION = "v18"
+API_VERSION = "v25"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 
 
