@@ -33,6 +33,6 @@ Yeni bir müşteri/firma eklemek istediğinde:
 
 ## Kurulum durumu
 
-Bu proje adım adım kuruluyor. Şu an: proje iskeleti hazır. Sıradaki adım:
-Meta ve Google Ads API erişimi için gereken bilgilerin nasıl alınacağı
-(bkz. konuşma geçmişi / talimatlar).
+- Meta Ads: canlı, saatlik veri çekiliyor.
+- Google Ads: kimlik doğrulama zinciri tamamlandı, "Basic Access" onayı bekleniyor (Google incelemesi ~5 iş günü sürebilir). Onaylanınca ek bir işlem gerekmeden otomatik çalışmaya başlar.
+- Panel: https://halilgrafik.github.io/reklam-panel/ adresinde yayında (GitHub Pages, ücretsiz plan public repo gerektirdiği için repo public yapıldı; arama motorlarına kapalı — robots.txt + noindex).
