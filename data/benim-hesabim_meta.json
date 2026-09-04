@@ -171,12 +171,12 @@
   },
   {
     "date": "2026-09-04",
-    "spend": 344.83,
-    "impressions": 3678,
-    "reach": 2980,
-    "messaging_conversations": 14,
+    "spend": 2.2,
+    "impressions": 28,
+    "reach": 5,
+    "messaging_conversations": 0,
     "purchases": 0,
     "purchase_value": 0.0,
-    "results": 1579
+    "results": 3
   }
 ]
