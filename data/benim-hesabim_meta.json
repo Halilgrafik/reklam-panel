@@ -271,12 +271,12 @@
   },
   {
     "date": "2026-09-14",
-    "spend": 340.81,
-    "impressions": 3000,
-    "reach": 2561,
-    "messaging_conversations": 9,
+    "spend": 11.25,
+    "impressions": 73,
+    "reach": 50,
+    "messaging_conversations": 1,
     "purchases": 0,
     "purchase_value": 0.0,
-    "results": 1246
+    "results": 30
   }
 ]
