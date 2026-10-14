@@ -568,5 +568,15 @@
     "purchases": 0,
     "purchase_value": 0.0,
     "results": 274
+  },
+  {
+    "date": "2026-10-14",
+    "spend": 101.06,
+    "impressions": 1104,
+    "reach": 1028,
+    "messaging_conversations": 8,
+    "purchases": 0,
+    "purchase_value": 0.0,
+    "results": 403
   }
 ]
