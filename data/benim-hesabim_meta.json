@@ -661,12 +661,12 @@
   },
   {
     "date": "2026-10-23",
-    "spend": 0.0,
-    "impressions": 0,
-    "reach": 0,
-    "messaging_conversations": 0,
+    "spend": 75.92,
+    "impressions": 1151,
+    "reach": 1088,
+    "messaging_conversations": 1,
     "purchases": 0,
     "purchase_value": 0.0,
-    "results": 0
+    "results": 343
   }
 ]
