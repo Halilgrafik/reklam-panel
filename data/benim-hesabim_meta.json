@@ -681,12 +681,12 @@
   },
   {
     "date": "2026-10-25",
-    "spend": 903.73,
-    "impressions": 16038,
-    "reach": 14389,
-    "messaging_conversations": 40,
+    "spend": 22.48,
+    "impressions": 362,
+    "reach": 265,
+    "messaging_conversations": 0,
     "purchases": 0,
     "purchase_value": 0.0,
-    "results": 4987
+    "results": 48
   }
 ]
